@@ -37,7 +37,8 @@ AXIS SETTINGS
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,3200/8,140}
 #else
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,3200/8,161.3}
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.7402,78.7402,200.0*8/3,760*1.1 }
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.7402,78.7402,200.0*8/3,760*1.1 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.7402,78.7402,3200/8,161.3 }
 #endif
 
 
@@ -56,23 +57,24 @@ const bool Z_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define X_MIN_POS 0
 #define Y_MAX_POS 180
 #define Y_MIN_POS 0
-#define Z_MAX_POS 220
+#define Z_MAX_POS 200
 #define Z_MIN_POS 0.15
 
 // Canceled home position
 #define X_CANCEL_POS 50
-#define Y_CANCEL_POS 190
+#define Y_CANCEL_POS 180
 
 //Pause print position
 #define X_PAUSE_POS 50
-#define Y_PAUSE_POS 190
+#define Y_PAUSE_POS 180
 #define Z_PAUSE_LIFT 20
 
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 #define HOMING_FEEDRATE {3000, 3000, 800, 0}  // set the homing speeds (mm/min)
 
 //#define DEFAULT_MAX_FEEDRATE          {500, 500, 12, 120}    // (mm/sec)
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+//#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 12, 120 }
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,500,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          1500    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
